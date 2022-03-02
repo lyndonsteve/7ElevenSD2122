@@ -12,22 +12,23 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div>
+    <img src="../assets/img/header_bg.fw.png" class="head" alt="">
+    <img src="../assets/img/logo.png" class="head-logo" alt="">
+    <img src="../assets/img/header_bg.fw.png" class="head1" alt="">
+  </div>
     <header>
     <nav class="navbar navbar-expand-lg">
  
-  <button style="background-color: #000;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 55px;">
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a id="navbar-btn-1" class="nav-link" href="#">Praesentium <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" style="margin-left: 20px;">
         <a class="nav-link" href="#"  >Voluptatum</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" style="margin-left: 20px;">
         <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dignissimos
         </a>
@@ -38,7 +39,7 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" style="margin-left: 50px;">
         <a class="nav-link" href="#">Blanditiis</a>
       </li>
     </ul>
@@ -47,13 +48,13 @@
     </header>
 
     <main>
-        <div>
+        <div class="text-content" style="text-align: center;">
             <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem sit amet tempor</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+            <p style="text-align:center; font-size: 27px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
         </div>
         <div>
         <form>
-            <h1>Registration Form</h1>
+            <h1 style="margin-left: 30%; color:red;">Registration Form</h1>
             <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
     <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
