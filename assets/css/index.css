@@ -13,6 +13,24 @@
     height: 22.5%;
 }
 
+footer > ul > li{
+    
+    display: inline-block;
+   padding: 0 50px;
+}
+
+footer{
+    color: #fff;
+    background-color: rgb(1, 106, 65);
+}
+
+footer > div > div > div >ul > li {
+    display: block;
+   text-decoration: none;
+   padding: 0 50px;
+}
+
+
 
 
 /* web navbar sidebar under lg breakpoint */
@@ -27,12 +45,14 @@
       justify-content: center;
     }
 
-    .navbar-nav .nav-item > .nav-link{
+    .navbar-nav .nav-item > .nav-link {
         color: #15764f;
         font-size: 30px;
         font-family: Arial;
     }
-    
+    .navbar-nav .nav-item > .nav-link:hover{
+            color: red;
+        }
 
     .navbar-nav::after{
     
@@ -50,20 +70,7 @@
     font-style: bold;
     margin: 25 290 0 270;
 }
-footer > ul > li{
-    
-    display: inline-block;
-   padding: 0 50px;
 }
-
-footer > ul > li > ul > li{
-    
-    display: block;
-   padding: 0 50px;
-}
-
-}
-
 
 /* mobile navbar sidebar under lg breakpoint */
 @media screen and (max-width: 992px) {
@@ -88,4 +95,34 @@ footer > ul > li > ul > li{
         transition: left 0.35s ease;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
+}
+
+.back {
+  width: 100%;
+
+  top: 0;
+  bottom: 0;
+}
+
+.div-center {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+  
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+  border-bottom: 2px solid #ccc;
+  display: table;
+}
+
+div.content {
+  display: table-cell;
+  vertical-align: middle;
 }
