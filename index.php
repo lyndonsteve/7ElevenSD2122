@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7 Eleven</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,39 +13,56 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div>
-    <img src="../assets/img/header_bg.fw.png" class="head" alt="">
-    <img src="../assets/img/logo.png" class="head-logo" alt="">
-    <img src="../assets/img/header_bg.fw.png" class="head1" alt="">
-  </div>
+  
     <header>
-    <nav class="navbar navbar-expand-lg">
+
+    <div>
+    <img src="assets/img/header_bg.fw.png" class="head" alt="">
+    <img src="assets/img/logo.png" class="head-logo" alt="">
+    <img src="assets/img/header_bg.fw.png" class="head" alt="">
+  </div>
+
+    <!-- <nav class="navbar navbar-expand-lg">
  
   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 55px;">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a id="navbar-btn-1" class="nav-link" href="#">Praesentium <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" style="margin-left: 20px;">
-        <a class="nav-link" href="#"  >Voluptatum</a>
-      </li>
-      <li class="nav-item dropdown" style="margin-left: 20px;">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dignissimos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item" style="margin-left: 50px;">
-        <a class="nav-link" href="#">Blanditiis</a>
-      </li>
+      
     </ul>
   </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav bg-light m-0 mx-lg-auto p-3 p-lg-0">
+            <li class="d-inline d-lg-none">
+                <button data-toggle="collapse" data-target="#nav" class="close float-right">&times;</button>
+            </li>
+            <li class="nav-item">
+              <a id="navbar-btn-1" class="nav-link" href="#">Praesentium</a>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="nav-link" href="#"  >Voluptatum</a>
+            </li>
+            <li class="nav-item dropdown" style="margin-left: 20px;">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dignissimos </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+      </li>
+      <li class="nav-item" style="margin-left: 20px;">
+        <a class="nav-link" href="#">Blanditiis</a>
+      </li>
+        </ul>
+    </div>
 </nav>
+
     </header>
 
     <main>

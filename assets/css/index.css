@@ -12,46 +12,29 @@
     width: 10%;
     height: 22.5%;
 }
-.head1{
-    width: 44.7%;
-    height: 15%;
-}
-/* .header-bg-left{
-    background-image: url("../img/header_bg.fw.png");
-    height: 100%;
-    width: 100px;
-    position: relative;
-    background-repeat: space repeat;
-} */
 
-header ul > li{
+
+
+/* web navbar sidebar under lg breakpoint */
+@media screen and (min-width: 992px) {
     
-    display: inline-block;
-   padding: 0 50px;
-}
-.navbar-nav {
+    .navbar-nav {
     
-    border: 3px solid rgba(21,118,79);
-    width: auto;
-    margin: 0 5rem;
-    align-items: center;
-  justify-content: center;
-}
+        border: 3px solid rgba(21,118,79);
+        width: auto;
+        margin: 0 5rem;
+        align-items: center;
+      justify-content: center;
+    }
 
+    .navbar-nav .nav-item > .nav-link{
+        color: #15764f;
+        font-size: 30px;
+        font-family: Arial;
+    }
+    
 
-.navbar-nav .nav-item > .nav-link{
-    color: #15764f;
-    font-size: 30px;
-    font-family: Arial;
-}
-
-/* .navbar-nav .nav-item > .nav-link:hover{
-    visibility: visible;
-    color: red;
-} */
-
-
-.navbar-nav::after{
+    .navbar-nav::after{
     
         content:'';
         position: absolute;
@@ -59,12 +42,9 @@ header ul > li{
         border-bottom: 5px solid #6A0136;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-    
+
 }
 
-
-
-/* //---------------------------------------------------------- */
 .text-content{
     font-family: sans-serif;
     font-style: bold;
@@ -80,4 +60,32 @@ footer > ul > li > ul > li{
     
     display: block;
    padding: 0 50px;
+}
+
+}
+
+
+/* mobile navbar sidebar under lg breakpoint */
+@media screen and (max-width: 992px) {
+    
+    .navbar-collapse.collapsing .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        transition: all 0.1s ease;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        height: auto;
+        width: 45%;
+        transition: left 0.35s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
 }
