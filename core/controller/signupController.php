@@ -1,6 +1,6 @@
 <?php
 
-class SignUpController {
+class signupController extends SignupModel {
 
     private $name;
     private $email;
@@ -17,79 +17,73 @@ class SignUpController {
         $this->mm = $mm;
         $this->dd = $dd;
     }
+       
+    public function signupUser(){
 
-     public function __toString ()
-    {
-        return "adasd";
+        if($this->emptyInput() == false){
+            header("location: ../registration.php?error=emptyinput");
+            exit();
+        }
+    
+        if($this->invalidName() == false){
+         header("location: ../registration.php?error=username");
+         exit();
+        }
+    
+        if($this->invalidEmail() == false){
+         header("location: ../registration.php?error=email");
+         exit();
+        }
+    
+        // if($this->uidTakenCheck() == false){
+        //  header("location: ../index.php?error=useroremailtaken");
+        //  exit();
+        // }
+    
+        else{
+            
+            $this->setUser($this->name, $this->email, $this->pwd, $this->yyyy, $this->mm, $this->dd);
+        }
+     }
+
+    private function emptyInput() {
+        $result = '';
+        if(empty($this->name) || empty($this->pwd) || empty($this->email) ){
+            $result = false;
     }
 
-   
-    // public function signupUser(){
+    else{
+        $result = true;
+    }
 
-    //     if($this->emptyInput() == false){
-    //         header("location: ../index.php?error=emptyinput");
-    //         exit();
-    //     }
-    
-    //     if($this->invalidName() == false){
-    //      header("location: ../index.php?error=username");
-    //      exit();
-    //     }
-    
-    //     if($this->invalidEmail() == false){
-    //      header("location: ../index.php?error=email");
-    //      exit();
-    //     }
-    
-    //     if($this->uidTakenCheck() == false){
-    //      header("location: ../index.php?error=useroremailtaken");
-    //      exit();
-    //     }
-    
-    //     else{
-             
-    //         $this->setUser($this->uid, $this->pwd, $this->fname, $this->lname, $this->email, $this->yyyy, $this->mm, $this->dd);
-    //     }
-    //  }
+    return $result;
+    }
 
-    // private function emptyInput() {
-    //     $result = '';
-    //     if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email) ){
-    //         $result = false;
-    // }
+    private function invalidName() {
+        $result = '';
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $this->name)){
+            $result = false;
+    }
 
-    // else{
-    //     $result = true;
-    // }
+    else{
+        $result = true;
+    }
 
-    // return $result;
-    // }
+    return $result;
+    }
 
-    // private function invalidName() {
-    //     $result = '';
-    //     if(!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
-    //         $result = false;
-    // }
+    private function invalidEmail() {
+        $result = '';
+    if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
+            $result = false;
+    }
 
-    // else{
-    //     $result = true;
-    // }
+    else{
+        $result = true;
+    }
 
-    // return $result;
-    // }
-
-    // private function invalidEmail() {
-    //     $result = '';
-    // if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
-    //         $result = false;
-    // }
-
-    // else{
-    //     $result = true;
-    // }
-
-    // return $result;
-    // }
+    return $result;
+    }
 
     // private function uidTakenCheck() { 
     //     $result = '';
