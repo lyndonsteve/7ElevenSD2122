@@ -22,7 +22,7 @@ if(isset($_POST["submit"])){
    
 
     //going to back to front page
-    //header("location: ../login.php");
+    header("location: ../login.php");
     
 }
 else{

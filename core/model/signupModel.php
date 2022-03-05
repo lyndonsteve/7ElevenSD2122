@@ -22,7 +22,7 @@ class SignupModel extends Dbh {
 
     protected function checkUser($name, $email){
 
-        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?');
+        $stmt = $this->connect()->prepare('SELECT users_name FROM users WHERE users_name = ? OR users_email = ?');
 
         if (!$stmt->execute(array($name, $email))) {
             $stmt = null;

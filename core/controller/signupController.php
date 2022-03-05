@@ -17,7 +17,7 @@ class signupController extends SignupModel {
         $this->mm = $mm;
         $this->dd = $dd;
     }
-       
+
     public function signupUser(){
 
         if($this->emptyInput() == false){
@@ -35,10 +35,10 @@ class signupController extends SignupModel {
          exit();
         }
     
-        // if($this->uidTakenCheck() == false){
-        //  header("location: ../index.php?error=useroremailtaken");
-        //  exit();
-        // }
+        if($this->uidTakenCheck() == false){
+         header("location: ../registration.php?error=useroremailtaken");
+         exit();
+        }
     
         else{
             
@@ -85,15 +85,15 @@ class signupController extends SignupModel {
     return $result;
     }
 
-    // private function uidTakenCheck() { 
-    //     $result = '';
-    //     if(!$this->checkUser($this->uid, $this->email)) { 
-    //         $result = false; 
-    //     } 
-    //     else { 
-    //         $result = true; 
-    //     } 
-    //     return $result; 
-    // }
+    private function uidTakenCheck() { 
+        $result = '';
+        if(!$this->checkUser($this->name, $this->email)) { 
+            $result = false; 
+        } 
+        else { 
+            $result = true; 
+        } 
+        return $result; 
+    }
     
 }
