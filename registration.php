@@ -78,9 +78,7 @@
         <div class="div-center">
 
           <div class="content">
-
-
-            <form>
+            <form action="includes/signup.inc.php" method="post">
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
@@ -95,12 +93,21 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" name="pwd" class="form-control" id="exampleInputPassword1">
               </div>
+              <div class="form-group">
+                <span class="my-2">Birthdate</span>
+                <select id="inputStateMonth" name="mm" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_month(this)">
+                  </select>
+                  <select id="inputStateDay" name="dd" class="form-select" aria-label="Default select" style="overflow-y: scroll;">
+                  </select>
+                  <select id="inputStateYear" name="yyyy" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_year(this)">
+                  </select>
+              </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Proin sit amet lectus venenatis, consectetur
                   magna vitae, convallis diam. Nullam iaculis.</label>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
             </form>
 
             <div><img src="assets/img/cards.png" alt="" style="width: 200px;"></div>
@@ -118,25 +125,25 @@
 
       <div class="row">
         <div class="col-sm">
-        <ul>
-          <li>SUSPENDISSE</li>
-          <li> Quisque</li>
-          <li>Faucibus</li>
-          <li>Sapien</li>
-          <li>Hendrerit</li>
-        </ul>
+          <ul>
+            <li>SUSPENDISSE</li>
+            <li> Quisque</li>
+            <li>Faucibus</li>
+            <li>Sapien</li>
+            <li>Hendrerit</li>
+          </ul>
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm">
-        <ul>
-          <li>PORTA</li>
-          <li> Mauris</li>
-          <li>Suscipit</li>
-          <li>At ipsum</li>
-          <li>Vehicula</li>
-        </ul>
+          <ul>
+            <li>PORTA</li>
+            <li> Mauris</li>
+            <li>Suscipit</li>
+            <li>At ipsum</li>
+            <li>Vehicula</li>
+          </ul>
         </div>
       </div>
 
@@ -154,17 +161,19 @@
 
       <div class="row">
         <div class="col-sm">
-        <ul>
-          <li>PLACERAT</li>
-          <li> Vitae</li>
-          <li>Convallis</li>
-          <li>Augue</li>
-          <li>Aliquam</li>
-        </ul>
+          <ul>
+            <li>PLACERAT</li>
+            <li> Vitae</li>
+            <li>Convallis</li>
+            <li>Augue</li>
+            <li>Aliquam</li>
+          </ul>
         </div>
       </div>
     </div>
   </footer>
+
+  <script src="assets/js/index.js"></script>
 
 </body>
 
