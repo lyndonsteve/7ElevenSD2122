@@ -1,4 +1,3 @@
-<?php include('server.php') ?>
 <html lang="en">
 
 <head>
@@ -20,7 +19,7 @@
   <header>
 
     <div>
-      <img src="assets/img/header_bg.fw.png" class="head" alt="">
+      <img src="assets/img/header_bg.fw.png" class="head" alt="" >
       <img src="assets/img/logo.png" class="head-logo" alt="">
       <img src="assets/img/header_bg.fw.png" class="head" alt="">
     </div>
@@ -37,10 +36,10 @@
     <nav class="navbar navbar-expand-lg">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" ></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav bg-light m-0 mx-lg-auto p-3 p-lg-0">
+        <ul class="navbar-nav bg-light m-0 mx-lg-auto p-lg-0">
           <li class="d-inline d-lg-none">
             <button data-toggle="collapse" data-target="#nav" class="close float-right">&times;</button>
           </li>
@@ -79,13 +78,11 @@
         <div class="div-center">
 
           <div class="content">
-
-
-            <form action="server.php" method="post">
+            <form action="includes/signup.inc.php" method="post">
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                <input type="name" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input name="name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
@@ -94,14 +91,23 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" name="pwd" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="form-group">
+                <span class="my-2">Birthdate</span>
+                <select id="inputStateMonth" name="mm" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_month(this)">
+                  </select>
+                  <select id="inputStateDay" name="dd" class="form-select" aria-label="Default select" style="overflow-y: scroll;">
+                  </select>
+                  <select id="inputStateYear" name="yyyy" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_year(this)">
+                  </select>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Proin sit amet lectus venenatis, consectetur
                   magna vitae, convallis diam. Nullam iaculis.</label>
               </div>
-              <button type="submit" class="btn btn-primary" name="save">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
             </form>
 
             <div><img src="assets/img/cards.png" alt="" style="width: 200px;"></div>
@@ -113,59 +119,42 @@
   </main>
 
 
-  <footer class="mt-5 text-center">
-
-    <div class="container">
-
-      <div class="row">
-        <div class="col-sm">
-        <ul>
-          <li>SUSPENDISSE</li>
-          <li> Quisque</li>
-          <li>Faucibus</li>
-          <li>Sapien</li>
-          <li>Hendrerit</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm">
-        <ul>
-          <li>PORTA</li>
-          <li> Mauris</li>
-          <li>Suscipit</li>
-          <li>At ipsum</li>
-          <li>Vehicula</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm">
-          <ul>
-            <li>FEUGIAT</li>
-            <li> Pellentesque </li>
-            <li>Accumsan</li>
-            <li>Velit in urna</li>
-            <li>Faucibus</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm">
-        <ul>
-          <li>PLACERAT</li>
-          <li> Vitae</li>
-          <li>Convallis</li>
-          <li>Augue</li>
-          <li>Aliquam</li>
-        </ul>
-        </div>
-      </div>
-    </div>
+  <footer class="mt-5 text-bottom">
+    <table>
+      <tr>
+        <th>SUSPENDISSE</th>
+        <th>PORTA</th>
+        <th>FEUGIAT</th>
+        <th>PLACERAT </th>
+      </tr>
+      <tr>
+        <td>Quisque</td>
+        <td>Mauris</td>
+        <td>Pellentesque</td>
+        <td>Vitae</td>
+      </tr>
+      <tr>
+        <td>Faucibus</td>
+        <td>Suscipit</td>
+        <td>Accumsan</td>
+        <td>Convallis  </td>
+      </tr>
+      <tr>
+        <td> Sapien </td>
+        <td>At ipsum</td>
+        <td>Velit in urna</td>
+        <td>Augue </td>
+      </tr>
+      <tr>
+        <td> Hendrerit</td>
+        <td>Vehicula</td>
+        <td>Faucibus </td>
+        <td>Aliquam</td>
+      </tr>
+    </table>
   </footer>
+
+  <script src="assets/js/index.js"></script>
 
 </body>
 
