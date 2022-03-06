@@ -17,7 +17,7 @@
 
     mysqli_query($db, "INSERT INTO user_info (name, email, password) VALUES ('$name', '$email', '$password')"); 
     $_SESSION['message'] = "Address saved"; 
-    header('location: registration.php');
+    header('location: registration.php'asdasdasdasdasdasdasdasdasdasdasd);
 }
 
 ?>
