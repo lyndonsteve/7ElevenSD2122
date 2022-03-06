@@ -14,15 +14,20 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
+<style>
+
+</style>
+
 <body>
 
   <header>
 
-    <div>
-      <img src="assets/img/header_bg.fw.png" class="head" alt="">
-      <img src="assets/img/logo.png" class="head-logo" alt="">
-      <img src="assets/img/header_bg.fw.png" class="head" alt="">
+    <div class="header-logo-group d-flex flex-row">
+      <div class="header-logo"></div>
+      <div class=""><img class="logo img-fluid" src="assets/img/logo.png" alt=""></div>
+      <div class="header-logo"></div>
     </div>
+
 
     <!-- <nav class="navbar navbar-expand-lg">
  
@@ -36,30 +41,30 @@
     <nav class="navbar navbar-expand-lg">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav bg-light m-0 mx-lg-auto p-3 p-lg-0">
+
           <li class="d-inline d-lg-none">
             <button data-toggle="collapse" data-target="#nav" class="close float-right">&times;</button>
           </li>
-          <li class="nav-item">
-            <a id="navbar-btn-1" class="nav-link" href="#">Praesentium</a>
+
+          <li class="nav-item dropdown" style="margin-left: 20px;">
+            <a id="navbar-btn-1" href="#" class="nav-link">Praesentium</a>
           </li>
-          <li class="nav-item" style="margin-left: 20px;">
+          <li class="nav-item dropdown" style="margin-left: 20px;">
             <a class="nav-link" href="#">Voluptatum</a>
           </li>
           <li class="nav-item dropdown" style="margin-left: 20px;">
-            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dignissimos </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="nav-link" href="#"> Dignissimos </a>
+
           </li>
-          <li class="nav-item" style="margin-left: 20px;">
-            <a class="nav-link" href="#">Blanditiis</a>
+          <li class="nav-item dropdown" style="margin-left: 20px;">
+            <a class="nav-link" href="#"> Blanditiis </a>
+
           </li>
         </ul>
       </div>
@@ -96,11 +101,11 @@
               <div class="form-group">
                 <span class="my-2">Birthdate</span>
                 <select id="inputStateMonth" name="mm" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_month(this)">
-                  </select>
-                  <select id="inputStateDay" name="dd" class="form-select" aria-label="Default select" style="overflow-y: scroll;">
-                  </select>
-                  <select id="inputStateYear" name="yyyy" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_year(this)">
-                  </select>
+                </select>
+                <select id="inputStateDay" name="dd" class="form-select" aria-label="Default select" style="overflow-y: scroll;">
+                </select>
+                <select id="inputStateYear" name="yyyy" class="form-select" aria-label="Default select" style="overflow-y: scroll;" onchange="change_year(this)">
+                </select>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
