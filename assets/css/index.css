@@ -5,32 +5,41 @@
     box-sizing: border-box;
     font-family: "Poppins";
 }
-.head{
-    width: 44.5%;
-    height: 15%;
-
-}
-.head-logo{
-    width: 10%;
-    height: 22.5%;
-}
-
-footer > ul > li{
-    
+footer>ul>li {
     display: inline-block;
-   padding: 0 50px;
+    padding: 0 50px;
+}
+footer>div>div>div>ul>li {
+    display: block;
+    text-decoration: none;
+    padding: 0 50px;
 }
 
-footer{
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+
+footer {
     color: #fff;
     background-color: rgb(1, 106, 65);
     padding: 25px;
 }
 
-footer > div > div > div >ul > li {
-    display: block;
-   text-decoration: none;
-   padding: 0 50px;
+.header-logo-group>div {
+    display: inline-block;
+}
+
+.header-logo {
+    width: 80vw;
+    height: 30vh;
+    background: url(../img/header_bg.fw.png);
+    background-repeat: repeat-x;
 }
 
 
@@ -38,46 +47,72 @@ footer > div > div > div >ul > li {
 
 /* web navbar sidebar under lg breakpoint */
 @media screen and (min-width: 992px) {
+    .head {
+        width: 44.7%;
+        height: 15%;
+    }
+    .head-logo {
+        width: 10%;
+        height: 22.5%;
+    }
     
     .navbar-nav {
     
-        border: 3px solid rgba(21,118,79);
+        border: 3px solid #15764F;
         width: auto;
         margin: 0 5rem;
         align-items: center;
-      justify-content: center;
+        justify-content: center;
     }
 
-    .navbar-nav .nav-item > .nav-link {
+    .navbar-nav .nav-item>.nav-link {
         color: #15764f;
         font-size: 30px;
         font-family: Arial;
     }
-    .navbar-nav .nav-item > .nav-link:hover{
-            color: red;
-        }
-
-    .navbar-nav::after{
-    
-        content:'';
+    .navbar-nav .nav-item>.nav-link:hover:after {
+        content: "";
         position: absolute;
-        bottom: 1rem;
-        border-bottom: 5px solid #6A0136;
+        top: 47px;
+        /* <-- change value to better position */
+        left: 50%;
+        /* centers the element's left edge */
+        margin-left: -15px;
+        /* <-- moves it back half it's own width */
+        width: 0px;
+        /* <-- don't need unit on 0 */
+        height: 0px;
+        /* <-- don't need unit on 0 */
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
+        border-bottom: 15px solid #15764F;
+        /* <-- change to bottom for up arrow */
+    }
 
-}
-
-.text-content{
-    font-family: sans-serif;
-    font-style: bold;
-    margin: 25 290 0 270;
-}
+    .text-content {
+        font-family: sans-serif;
+        font-style: bold;
+        margin: 25 290 0 270;
+    }
+    footer {
+        color: #fff;
+        background-color: rgb(1, 106, 65);
+    }
+    .header-logo-group>div>img {
+        width: 50%;
+        margin-left: 25%;
+    }
 }
 
 /* mobile navbar sidebar under lg breakpoint */
 @media screen and (max-width: 992px) {
-    
+    .head {
+        width: 42%;
+        height: 30%;
+    }
+    .head-logo {
+        width: 100px;
+    }
     .navbar-collapse.collapsing .navbar-nav {
         display: block;
         position: fixed;
@@ -98,6 +133,10 @@ footer > div > div > div >ul > li {
         transition: left 0.35s ease;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
+    .header-logo-group>div>img {
+        width: 70%;
+        margin-left: 10%;
+    }
 }
 .text-center{
     color: rgb(219, 82, 82);
@@ -106,30 +145,28 @@ footer > div > div > div >ul > li {
 
 }
 .back {
-  width: 100%;
-
-  top: 0;
-  bottom: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
 
 .div-center {
-  width: 400px;
-  height: 400px;
-  border-radius: 10px;
-  box-shadow: 5px 10px 18px #888888;
-  background-color: rgb(255, 255, 255);
-  
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;
-  padding: 1em 2em;
-  border-bottom: 2px solid #ccc;
-  display: table;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    border-bottom: 2px solid #ccc;
+    display: table;
 }
 
 
