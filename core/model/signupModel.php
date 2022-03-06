@@ -9,10 +9,10 @@ class SignupModel extends Dbh {
 
         $bdate = date("Y-m-d", mktime(0, 0, 0, $mm, $dd, $yyyy));
 
-        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+        // $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
 
-        if (!$stmt->execute(array($name, $hashedPwd, $email, $bdate))) {
+        if (!$stmt->execute(array($name, $email, $pwd, $bdate))) {
             $stmt = null;
             header("location: ../500.php?error=stmtfailed");
             exit();
